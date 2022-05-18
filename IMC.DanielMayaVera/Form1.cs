@@ -10,11 +10,27 @@ using System.Windows.Forms;
 
 namespace IMC.DanielMayaVera
 {
-    public partial class Form1 : Form
+    public partial class formCal : Form
     {
-        public Form1()
+        public formCal()
         {
             InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void formCal_Load(object sender, EventArgs e)
+        {
+            DateTime fecha = DateTime.Now;
+            lblDate.Text = fecha.ToString();
         }
     }
 }
