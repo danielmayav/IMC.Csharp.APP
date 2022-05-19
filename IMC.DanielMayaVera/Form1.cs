@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace IMC.DanielMayaVera
 {
     public partial class formCal : Form
     {
+       
+
         public formCal()
         {
             InitializeComponent();
@@ -69,6 +72,24 @@ namespace IMC.DanielMayaVera
                 clasificacion = "Obesidad";
                 lblClasificacion.Text = clasificacion;
             }
+
+            TextWriter Escribir = new StreamWriter("HistorialIMC.txt");
+            Escribir.WriteLine(fecha);
+            Escribir.WriteLine(nombre);
+            Escribir.WriteLine(peso);
+            Escribir.WriteLine(imc);
+            Escribir.WriteLine(clasificacion);
+            Escribir.Close();
+
+        }
+
+        private void btnHist_Click(object sender, EventArgs e)
+        {
+            rtxHistorial.Visible = true;
+            TextReader Leer = new StreamReader("HistorialIMC.txt");
+            rtxHistorial.Text = Leer.ReadToEnd();
+            Leer.Close();
+
         }
     }
 }

@@ -36,7 +36,7 @@
             this.btnHist = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtxHistorial = new System.Windows.Forms.RichTextBox();
             this.lblDate = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtEstatura = new System.Windows.Forms.TextBox();
@@ -61,7 +61,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("DejaVu Sans Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(126, 79);
+            this.lblNombre.Location = new System.Drawing.Point(68, 78);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(79, 22);
             this.lblNombre.TabIndex = 1;
@@ -72,21 +72,21 @@
             // 
             this.lblEstatura.AutoSize = true;
             this.lblEstatura.Font = new System.Drawing.Font("DejaVu Sans Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstatura.Location = new System.Drawing.Point(126, 118);
+            this.lblEstatura.Location = new System.Drawing.Point(8, 119);
             this.lblEstatura.Name = "lblEstatura";
-            this.lblEstatura.Size = new System.Drawing.Size(82, 22);
+            this.lblEstatura.Size = new System.Drawing.Size(139, 22);
             this.lblEstatura.TabIndex = 3;
-            this.lblEstatura.Text = "Estatura";
+            this.lblEstatura.Text = "Estatura (mts.)";
             // 
             // lblPeso
             // 
             this.lblPeso.AutoSize = true;
             this.lblPeso.Font = new System.Drawing.Font("DejaVu Sans Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPeso.Location = new System.Drawing.Point(148, 157);
+            this.lblPeso.Location = new System.Drawing.Point(52, 160);
             this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(49, 22);
+            this.lblPeso.Size = new System.Drawing.Size(95, 22);
             this.lblPeso.TabIndex = 5;
-            this.lblPeso.Text = "Peso";
+            this.lblPeso.Text = "Peso (Kg.)";
             this.lblPeso.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnCalcular
@@ -109,12 +109,13 @@
             this.btnHist.TabIndex = 8;
             this.btnHist.Text = "HISTORICO";
             this.btnHist.UseVisualStyleBackColor = true;
+            this.btnHist.Click += new System.EventHandler(this.btnHist_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("DejaVu Sans Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 297);
+            this.label2.Location = new System.Drawing.Point(8, 281);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(215, 22);
             this.label2.TabIndex = 9;
@@ -124,26 +125,26 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("DejaVu Sans Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(99, 346);
+            this.label3.Location = new System.Drawing.Point(99, 330);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 22);
             this.label3.TabIndex = 10;
             this.label3.Text = "Clasificacion";
             // 
-            // richTextBox1
+            // rtxHistorial
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(344, 276);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(166, 122);
-            this.richTextBox1.TabIndex = 13;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.Visible = false;
+            this.rtxHistorial.Location = new System.Drawing.Point(12, 391);
+            this.rtxHistorial.Margin = new System.Windows.Forms.Padding(2);
+            this.rtxHistorial.Name = "rtxHistorial";
+            this.rtxHistorial.Size = new System.Drawing.Size(433, 122);
+            this.rtxHistorial.TabIndex = 13;
+            this.rtxHistorial.Text = "";
+            this.rtxHistorial.Visible = false;
             // 
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(9, 19);
+            this.lblDate.Location = new System.Drawing.Point(9, 9);
             this.lblDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(0, 13);
@@ -151,21 +152,21 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(238, 81);
+            this.txtNombre.Location = new System.Drawing.Point(180, 80);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(141, 20);
             this.txtNombre.TabIndex = 15;
             // 
             // txtEstatura
             // 
-            this.txtEstatura.Location = new System.Drawing.Point(238, 122);
+            this.txtEstatura.Location = new System.Drawing.Point(180, 121);
             this.txtEstatura.Name = "txtEstatura";
             this.txtEstatura.Size = new System.Drawing.Size(141, 20);
             this.txtEstatura.TabIndex = 16;
             // 
             // txtPeso
             // 
-            this.txtPeso.Location = new System.Drawing.Point(238, 161);
+            this.txtPeso.Location = new System.Drawing.Point(180, 160);
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(141, 20);
             this.txtPeso.TabIndex = 17;
@@ -174,7 +175,7 @@
             // 
             this.lblIMC.AutoSize = true;
             this.lblIMC.Font = new System.Drawing.Font("DejaVu Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIMC.Location = new System.Drawing.Point(250, 297);
+            this.lblIMC.Location = new System.Drawing.Point(250, 281);
             this.lblIMC.Name = "lblIMC";
             this.lblIMC.Size = new System.Drawing.Size(0, 24);
             this.lblIMC.TabIndex = 18;
@@ -183,7 +184,7 @@
             // 
             this.lblClasificacion.AutoSize = true;
             this.lblClasificacion.Font = new System.Drawing.Font("DejaVu Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClasificacion.Location = new System.Drawing.Point(250, 346);
+            this.lblClasificacion.Location = new System.Drawing.Point(250, 330);
             this.lblClasificacion.Name = "lblClasificacion";
             this.lblClasificacion.Size = new System.Drawing.Size(0, 24);
             this.lblClasificacion.TabIndex = 19;
@@ -193,14 +194,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(561, 450);
+            this.ClientSize = new System.Drawing.Size(499, 542);
             this.Controls.Add(this.lblClasificacion);
             this.Controls.Add(this.lblIMC);
             this.Controls.Add(this.txtPeso);
             this.Controls.Add(this.txtEstatura);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblDate);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.rtxHistorial);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnHist);
@@ -228,7 +229,7 @@
         private System.Windows.Forms.Button btnHist;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtxHistorial;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtEstatura;
